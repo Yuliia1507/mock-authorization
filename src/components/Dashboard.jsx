@@ -5,7 +5,6 @@ function Dashboard() {
 	const { logout } = useContext(AuthContext);
 
 	return (
-		<div className="dashboard-wrapper">
 			<div className="dashboard-card">
 				<h1 className="dashboard-title">Welcome!</h1>
 				<p className="dashboard-subtitle">
@@ -13,7 +12,6 @@ function Dashboard() {
 				</p>
 				<button onClick={logout}>Logout</button>
 			</div>
-		</div>
 	);
 }
 
