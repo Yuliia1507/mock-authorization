@@ -6,9 +6,9 @@ const mockUser = {
 	password: "1234",
 };
 
- function LoginForm() {
-	const { login, isLoggedIn } = useContext(AuthContext); 
-	
+function LoginForm() {
+	const { login, isLoggedIn } = useContext(AuthContext);
+
 
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
@@ -19,7 +19,7 @@ const mockUser = {
 		if (!isLoggedIn) {
 			setUsername("");
 			setPassword("");
-			usernameRef.current?.focus(); 
+			usernameRef.current?.focus();
 		}
 	}, [isLoggedIn]);
 
@@ -28,8 +28,7 @@ const mockUser = {
 
 		if (username === mockUser.username && password === mockUser.password) {
 			login();
-			setUsername("");
-			setPassword("");
+			
 		} else {
 			alert("Wrong credentials");
 		}
@@ -47,7 +46,7 @@ const mockUser = {
 					placeholder="Enter your username - admin"
 					value={username}
 					onChange={(e) => setUsername(e.target.value)}
-					ref={usernameRef} 
+					ref={usernameRef}
 				/>
 			</div>
 
